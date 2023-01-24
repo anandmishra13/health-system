@@ -7,11 +7,17 @@ body {
     justify-content:center;
     align-items: center;
   }
-  
+  p {
+    font-size: 18px;
+    letter-spacing: 1.5px;
+  }
   /* === Wrapper Styles === */
   #FileUpload {
     display: flex;
     justify-content: center;
+  }
+  .output-section {
+    margin-top: 7.2rem !important;
   }
   .wrapper {
     margin: 30px;
@@ -20,6 +26,7 @@ body {
     border-radius: 10px;
     background-color: white;
     width: 415px;
+    height: 30rem;
   }
   
   /* === Upload Box === */
@@ -66,11 +73,10 @@ body {
   }
   .file__name {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: baseline;
+    /* align-items: baseline; */
     width: 300px;
-    line-height: 0;
     color: #0c3214;
     font-size: 18px;
     letter-spacing: 1.5px;
@@ -83,4 +89,66 @@ body {
     padding: 15px;
     font-size: 40px;
     color: #0c3214;
+  }
+
+  .preview-image {
+    width: 10rem;
+    height: 10rem;
+    margin: 21px auto;
+  }
+  .final-value {
+    background-color: #e6f5e9;
+    border-radius: 10px;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .scan {
+    text-align: center;
+    padding: 6px 2px;
+    margin: auto;
+    width: 21rem;
+    height: 13rem;
+    position: relative;
+    background-color: #e6f5e9;
+    border-radius: 10px;
+  }
+  
+  .scanning::after {
+    content: '';
+    background: rgb(23, 162, 74);
+    width: 0.25em;
+    height: 10rem;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    opacity: 7;
+    z-index: 2;
+    animation: 2s infinite ease-in-out roll;
+  }
+  
+  .scan img {
+    height: 12rem;
+    width: 12rem;
+  }
+  
+  @keyframes roll {
+    0% {
+      transform: translateX(-80px);
+    }
+    50% {
+      transform: translateX(80px);
+    }
+    100% {
+      transform: translateX(-80px);
+    }
+  }
+  
+  .output-image {
+    height: 12rem;
+    width: 12rem;
   }

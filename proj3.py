@@ -43,10 +43,11 @@ def detect_pink():
     _, img_encoded = cv2.imencode('.jpg', img)
 
         # Return the processed image
-    cv2.imshow("Image", img)
+    # cv2.imshow("Image", img)
     cv2.waitKey(0)
     response = make_response(img_encoded.tobytes())
     response.headers.set('Content-Type', 'image/jpeg')
+    response.headers.add('Access-Control-Allow-Origin', 'http://127.0.0.1:5500')
     return response
 
     #return jsonify(img=img_encoded.tostring())

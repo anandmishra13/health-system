@@ -7,7 +7,9 @@
   </head>
   <body>
     <div class="container-fluid">
-        <div class="col-6">
+        <div class="row">
+          <div class="col-6 mt-5">
+          <h3 class="mt-5">Malaria Detector</h3>
             <div class="row">
                 <div id="FileUpload">
                     <div class="wrapper">
@@ -19,9 +21,10 @@
                         <i class="far fa-file-pdf"></i>
                         <div class="file">
                           <div class="file__name">
+                            <p id="selectImageText" class="text-center mt-2">Please select a image</p>
+                            <img class="preview-image" id="givenImage">
                             <p id="imgName"></p>
                             <p id="imgSize"></p>
-                            <p id="imgType"></p>
                             <i class="fas fa-times"></i>
                           </div>
                           <div class="progress d-none">
@@ -35,6 +38,25 @@
                     </div>
                   </div>
             </div>
+        </div>
+        <div class="col-6 mt-5 ps-5">
+          <div class="wrapper output-section ms-5">
+            <p id="rightConetntText">Select a image to start the process</p>
+            <div class="scan-and-output">
+              <div id="imageScanning" class="scan">
+                <img id="resImage" class="output-image" >
+                <img id="scanImage" class="d-none" />
+              </div>
+            </div>
+            <div>
+              <p>Output</p>
+              <div class="final-value">
+                <p id="result" class="result">Result: --</p>
+                <p id="type" class="type"></p>
+              </div>
+            </div>
+          </div>
+        </div>
         </div>
     </div>
 
